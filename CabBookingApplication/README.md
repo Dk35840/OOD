@@ -1,3 +1,8 @@
+This contains lld for CabBooking application
+
+
+
+Problem Statement:
 https://abhishekdeb48.medium.com/all-about-machine-coding-round-8e56c866fe87
 
 Cab Booking Application
@@ -55,28 +60,28 @@ Concurrency Handling (BONUS) [Good if you do this]
 
 Sample Test Cases:
 Onboard 3 users
-add_user(“Abhishek, M, 23”); update_userLocation(“Abhishek”,(0,0)) 
-add_user(“Rahul , M, 29”); update_userLocation(“Rahul”,(10,0))
-add_user(“Nandini, F, 22”) ;update_userLocation(“Nandini”,(15,6))
+add_user(â€œAbhishek, M, 23â€); update_userLocation(â€œAbhishekâ€,(0,0)) 
+add_user(â€œRahul , M, 29â€); update_userLocation(â€œRahulâ€,(10,0))
+add_user(â€œNandini, F, 22â€) ;update_userLocation(â€œNandiniâ€,(15,6))
 
 Onboard 3 driver to the application
-add_driver(“Driver1, M, 22”,“Swift, KA-01-12345”,(10,1))
-add_driver(“Driver2, M, 29”,“Swift, KA-01-12345”,(11,10))
-add_driver(“Driver3, M, 24”,“Swift, KA-01-12345”,(5,3))
+add_driver(â€œDriver1, M, 22â€,â€œSwift, KA-01-12345â€,(10,1))
+add_driver(â€œDriver2, M, 29â€,â€œSwift, KA-01-12345â€,(11,10))
+add_driver(â€œDriver3, M, 24â€,â€œSwift, KA-01-12345â€,(5,3))
 	
 User trying to get a ride 
-find_ride(“Abhishek” ,(0,0),(20,1))
+find_ride(â€œAbhishekâ€ ,(0,0),(20,1))
 		Output : No ride found [Since all the driver are more than 5 units away from user]
-find_ride(“Rahul” ,(10,0),(15,3))
+find_ride(â€œRahulâ€ ,(10,0),(15,3))
 		Output : Driver1 [Available]
-		choose_ride(“Rahul”,”Driver1”)
+		choose_ride(â€œRahulâ€,â€Driver1â€)
 		Output : ride Started
-		calculateBill(“Rahul”)
+		calculateBill(â€œRahulâ€)
 		Output : ride Ended bill amount $ 6
-		Backend API Call:	update_userLocation(“Rahul”,(15,3))
-					update_driverLocation(“Driver1”,(15,3))
-change_driver_status(“Driver1”,False)
-find_ride(“Nandini”,(15,6),(20,4))
+		Backend API Call:	update_userLocation(â€œRahulâ€,(15,3))
+					update_driverLocation(â€œDriver1â€,(15,3))
+change_driver_status(â€œDriver1â€,False)
+find_ride(â€œNandiniâ€,(15,6),(20,4))
 Output : No ride found [Driver one in set to not available]
 Total earning by drivers
 find_total_earning()
